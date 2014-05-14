@@ -1,6 +1,4 @@
-
-TheGreenThumb::Application.routes.draw do
-
+Mewanty::Application.routes.draw do
   resources :categories
 
   root to: "home#index"
@@ -25,4 +23,3 @@ TheGreenThumb::Application.routes.draw do
     end
   end
 end
-

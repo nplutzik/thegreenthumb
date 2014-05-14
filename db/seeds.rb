@@ -2,7 +2,7 @@ ActiveRecord::SessionStore::Session.create!([
   {session_id: "556cb1d6ec078e83ccbb1f50aaedbafb", data: "BAh7CEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbB1sGaQZJIiIkMmEk\nMTAkaG9RRmJaZ0JEUjVFM2dOeHN2MmlXTwY7AFRJIhBfY3NyZl90b2tlbgY7\nAEZJIjFDYU9zOXgvYVhCZjNxYytIaUpybzdFd21GSFJwK1JnNENRcDRId3NW\naGt3PQY7AEZJIgpmbGFzaAY7AFR7B0kiDGRpc2NhcmQGOwBUWwBJIgxmbGFz\naGVzBjsAVHsGOgtub3RpY2VJIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkg\nY3JlYXRlZC4GOwBU\n"}
 ])
 User.create!([
-  {email: "nplutzik@gmail.com", password: "12345678", encrypted_password: "$2a$10$hoQFbZgBDR5E3gNxsv2iWOW3wOt6WxHahrAGMiwx2eijghNHUee0S", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 3, current_sign_in_at: "2014-05-13 09:11:42", last_sign_in_at: "2014-05-13 08:42:01", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", first_name: nil, last_name: nil, avatar: nil, is_closed: nil, is_admin: true}
+  {email: "vajapravin23@gmail.com", encrypted_password: "$2a$10$hoQFbZgBDR5E3gNxsv2iWOW3wOt6WxHahrAGMiwx2eijghNHUee0S", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 3, current_sign_in_at: "2014-05-13 09:11:42", last_sign_in_at: "2014-05-13 08:42:01", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", first_name: nil, last_name: nil, avatar: nil, is_closed: nil, is_admin: true}
 ])
 Category.create!([
   {name: "Food"},

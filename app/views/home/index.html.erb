@@ -14,7 +14,7 @@
 
 					<header>
 
-					<h1 class="entry-title"><a href="http://thewall.sofarider.com/news/egypt-by-tinou-bao/" rel="bookmark" title="<%= product.name %>"><%= product.name %></a></h1><span class="liner"><span class="fatter"></span></span>			
+					<h1 class="entry-title"><a href="http://thewall.sofarider.com/news/egypt-by-tinou-bao/" rel="bookmark" title="<%= product.name %>"><%= product.name %></a></h1><span class="liner"><span class="fatter"></span></span>
 					<div class="entry-meta">
 						<% product.categories.each do |category| %>
 							<span class="formats pf-image">
@@ -43,8 +43,8 @@
 							</a>
 						</span>
 						<div class="social pull-right">
-							<%= link_to_function "<i class='fa fa-facebook'></i>".html_safe, "postFacebook('http://#{self.request.host}/products/#{product.slug}','http://#{self.request.host}#{product.image}', '#{escapeHTML(product.name)}', '#{escapeHTML(product.desc)}')" %> 
-							<%= link_to_function "<i class='fa fa-twitter'></i>".html_safe, "return popitup('http://twitter.com/share?url=http://#{self.request.host}/products/#{product.slug}&text=#{escapeHTML(product.name)}&via=MeWanty&count=horizontal')", target: "_blank", rel: "nofollow"  %>
+							<%= link_to_function "<i class='fa fa-facebook'></i>".html_safe, "postFacebook('http://#{self.request.host}/products/#{product.slug}','http://#{self.request.host}#{product.image}', '#{escapeHTML(product.name)}', '#{escapeHTML(product.desc)}')" %>
+							<%= link_to_function "<i class='fa fa-twitter'></i>".html_safe, "return popitup('http://twitter.com/share?url=http://#{self.request.host}/products/#{product.slug}&text=#{escapeHTML(product.name)}&via=TheGreenThumb&count=horizontal')", target: "_blank", rel: "nofollow"  %>
 						</div>
 					</footer>
 

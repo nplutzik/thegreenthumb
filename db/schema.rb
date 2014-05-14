@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140513192441) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "authentications", force: true do |t|
     t.string   "uid"
     t.integer  "user_id"
@@ -26,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140513192441) do
     t.datetime "updated_at"
   end
 
-  add_index "authentications", ["user_id"], name: "index_authentications_on_user_id", using: :btree
+  add_index "authentications", ["user_id"], name: "index_authentications_on_user_id"
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -41,8 +38,8 @@ ActiveRecord::Schema.define(version: 20140513192441) do
     t.datetime "updated_at"
   end
 
-  add_index "product_categories", ["category_id"], name: "index_product_categories_on_category_id", using: :btree
-  add_index "product_categories", ["product_id"], name: "index_product_categories_on_product_id", using: :btree
+  add_index "product_categories", ["category_id"], name: "index_product_categories_on_category_id"
+  add_index "product_categories", ["product_id"], name: "index_product_categories_on_product_id"
 
   create_table "products", force: true do |t|
     t.string   "name"
@@ -61,12 +58,12 @@ ActiveRecord::Schema.define(version: 20140513192441) do
     t.datetime "updated_at"
   end
 
-  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", using: :btree
+  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true
+  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
-    t.string   "password"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -84,8 +81,8 @@ ActiveRecord::Schema.define(version: 20140513192441) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
   create_table "votes", force: true do |t|
     t.integer  "votable_id"
@@ -99,7 +96,7 @@ ActiveRecord::Schema.define(version: 20140513192441) do
     t.datetime "updated_at"
   end
 
-  add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
-  add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
+  add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
+  add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
 
 end

@@ -1,6 +1,5 @@
 # Load the Rails application.
 require File.expand_path('../application', __FILE__)
 
-
-TheGreenThumb::Application.initialize!
-
+# Initialize the Rails application.
+Mewanty::Application.initialize!
