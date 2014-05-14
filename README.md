@@ -1,4 +1,4 @@
-EnviroMart
+The Green Thumb
 
 A place that brings together sustainable, fairtrade, and ethical products. A yelp of products. Find out more about the products you are buying!
 
