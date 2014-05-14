@@ -1,4 +1,6 @@
+
 TheGreenThumb::Application.routes.draw do
+
   resources :categories
 
   root to: "home#index"
@@ -22,4 +24,8 @@ TheGreenThumb::Application.routes.draw do
       post 'vote_by'
     end
   end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> 037d3874b97e6a58ae0e032011df602e6f24692f
