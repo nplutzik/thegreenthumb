@@ -1,4 +1,4 @@
-  function postFacebook(link, picture, caption, description) {
+  function postFacebook(link, picture, caption, description) {    
     caption = decodeURI(caption);
     description = decodeURI(description);
     caption = caption.replace("&#39;","'");
@@ -9,7 +9,7 @@
       if(response.status === 'connected') {
         FB.ui({
             method : 'feed',
-            name : 'TheGreenThumb',
+            name : 'GreenThumb',
             link : link,
             picture : picture,
             caption : caption,
@@ -27,7 +27,7 @@
                     status = doAthenticationFb(responseAuth, person);
                     FB.ui({
                         method : 'feed',
-                        name : 'TheGreenThumb',
+                        name : 'GreenThumb',
                         link : link,
                         picture : picture,
                         caption : caption,

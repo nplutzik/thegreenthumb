@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<title>The Green Thumb</title>
+  	<title>Green Thumb</title>
+  	<link rel="icon" href="/assets/favicon.png" type="image/x-icon"/>
   	<%= stylesheet_link_tag    "application", media: "all" %>
   	<%= javascript_include_tag "application" %>
   	<%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
-		<%= render "/shared/header" %>
-		<%= yield %>
-		<%= render "/shared/footer" %>
-		<%= render "/shared/social_sdks" %>
-	</div>
+	<%= render "/shared/header" %>
+	<%= yield %>
+	<%= render "/shared/footer" %>
 </body>
 </html>

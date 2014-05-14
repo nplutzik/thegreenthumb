@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.4'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -53,4 +54,3 @@ gem "carrierwave", "~> 0.10.0"
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem "seed_dump"
 gem 'acts_as_votable', '~> 0.9.0'
-gem 'pg'

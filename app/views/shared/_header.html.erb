@@ -1,18 +1,21 @@
-
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
+<header>
+  <div class="container">
+    <div class="navbar navbar-default" role="navigation">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <i class="fa fa-bars"></i>
         </button>
-        <a class="navbar-brand" href="/">The Green Thumb</a>
+        <a class="navbar-brand" href="/"></a>
       </div>
       <div class="navbar-collapse collapse">
         <%= users_nav_links %>
+        <%= form_tag "#", class: "search-form" do %>
+          <i class="fa fa-search"></i>
+          <input type="text" name="search" class="col-md-12 pull-right search-txt" placeholder="Search">
+          <i class="fa fa-long-arrow-right"></i>
+        <% end %>
       </div>
     </div>
   </div>
-
+</header>

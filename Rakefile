@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Mewanty::Application.load_tasks
+GreenThumb::Application.load_tasks
