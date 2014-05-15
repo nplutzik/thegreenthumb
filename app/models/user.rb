@@ -20,6 +20,7 @@
 #  is_admin               :boolean
 #  created_at             :datetime
 #  updated_at             :datetime
+#  address                :string(255)
 #
 
 class User < ActiveRecord::Base

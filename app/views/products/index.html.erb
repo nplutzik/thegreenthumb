@@ -2,25 +2,25 @@
   <div class="bs-example bs-example-bg-classes">
     <p class="bg-success">Products</p>
     <%= link_to 'New Product', new_product_path, class: 'btn btn-default' %>
-    <table class="table">
+    <table class="table col-md-12">
       <thead>
-        <tr>
-          <th>Name</th>
-          <th>Image</th>
-          <th>Link</th>
-          <th>Desc</th>
-          <th>Action</th>
+        <tr class="row-fluid">
+          <th class="col-md-2">Name</th>
+          <th class="col-md-2">Image</th>
+          <th class="col-md-3">Link</th>
+          <th class="col-md-3">Desc</th>
+          <th class="col-md-2">Action</th>
         </tr>
       </thead>
 
       <tbody>
         <% @products.each do |product| %>
-          <tr>
-            <td class="col-xs-2"><%= product.name rescue '' %>
-            <td class="col-xs-2"><%= image_tag product.image, size: '100x100' rescue '' %>
-            <td class="col-xs-2"><%= product.link rescue '' %>
-            <td class="col-xs-3"><%= product.desc rescue '' %>
-            <td class="col-xs-2"><%= link_to 'Edit', edit_product_path(product) %> | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <tr class="row-fluid">
+            <td class="col-md-2"><%= product.name rescue '' %>
+            <td class="col-md-2"><%= image_tag product.image, size: '100x100' rescue '' %>
+            <td class="col-md-3"><%= product.link rescue '' %>
+            <td class="col-md-3"><%= product.desc rescue '' %>
+            <td class="col-md-2"><%= link_to 'Edit', edit_product_path(product) %> | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>

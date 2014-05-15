@@ -2,13 +2,13 @@
 $(document).ready(function(){
 	$(".chzn-select").chosen({default_multiple_text: 'Choose categories'});
 	var container = document.querySelector('.gridalicious');
-	var msnry = new Masonry(container, {
-		columnWidth: 190,
-		itemSelector: '.galcolumn'
-	});
-	imagesLoaded(container, function() {
-		msnry.layout();
-	});
+	// var msnry = new Masonry(container, {
+	// 	columnWidth: 190,
+	// 	itemSelector: '.galcolumn'
+	// });
+	// imagesLoaded(container, function() {
+	// 	msnry.layout();
+	// });
 	$(".like-this-post").click(function(){
 		vote = $(this).attr("data-vote");
 		user_id = $(this).attr("data-user-id");

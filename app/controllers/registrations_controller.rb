@@ -1,15 +1,15 @@
 class RegistrationsController < Devise::RegistrationsController
 
   def create
-	params[:user][:role] = "user"
-	super
-	session[:omniauth] = nil unless @user.new_record?
-  end  
+  	params[:user][:role] = "user"
+  	super
+  	session[:omniauth] = nil unless @user.new_record?
+  end
 
   def clean_up_passwords(*args)
     
   end
-
+  
   private 
   
   def build_resource(*args)
