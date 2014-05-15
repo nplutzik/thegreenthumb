@@ -18,3 +18,4 @@ GreenThumb::Application.routes.draw do
   match '/auth/:provider/callback' => 'authentications#create', via: [:post, :get]
 
 get "/products/vote_by" => "abc#vote_by"
+  end
