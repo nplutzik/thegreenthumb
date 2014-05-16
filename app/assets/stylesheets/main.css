@@ -156,7 +156,7 @@ header{
 	width: 164px;
 	height: 15px;
 }
-footer{
+footer.bottom-footer{
 	background-color:  #57ab6c;
 	width: 100%;
 	height: 300px;
@@ -174,14 +174,14 @@ footer{
 	color:  #057521;
 	font-size: 10px;	
 }
-footer .ft-content a{
+footer.bottom-footer .ft-content a{
 	font-family: "Myriad Pro";
 	color:  #057521;
 	font-size: 16px;
 	line-height: 1.5;
 	text-transform: uppercase;
 }
-footer a:hover{
+footer.bottom-footer a:hover{
 	color: #fff;
 }
 .dv-deals .container{
@@ -193,8 +193,12 @@ footer a:hover{
 p.bg-success{
 	padding: 10px;
 }
-
+.galcolumn a{color: #60bf78;}
+.galcolumn a:hover{color: #057521;}
 .container{
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+.cn-header{
+	background-color: #fff;
 }

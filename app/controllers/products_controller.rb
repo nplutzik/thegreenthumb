@@ -1,15 +1,23 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: [:edit, :update, :destroy]
+  before_action :validate_admin_user, only: [:edit, :update, :destroy]
 
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    if !params[:q].nil?
+      @products = Product.includes(:categories).where("LOWER(categories.name) like '%#{params[:q].to_s.downcase}%' OR LOWER(products.name) like '%#{params[:q].to_s.downcase}%'")
+    elsif !params[:c].nil?
+      @products = Product.includes(:categories).where("LOWER(categories.name) like '%#{params[:c].to_s.downcase}%'").references(:categories)
+    else
+      @products = Product.all
+    end
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    @product = Product.find_by_slug(params[:id])
   end
 
   # GET /products/new
